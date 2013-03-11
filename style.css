@@ -83,85 +83,111 @@ html, body {font-family:Arial, Helvetica, sans-serif; background:#000;}
 /*------------------------wrapper----------------------------*/
 #wrapper
 {
-	width:1000px;
+	width:900px;
 	margin:0px auto;
 }
-
-#header
-{
-	height:36px;
-	padding:7px 12px 0 18px;
+#logo {
+	background: url(img/thedeep_logo.jpg) no-repeat center center;
+	width: 900px;
+	height: 80px;
 }
-.logo
-{
-	width:255px;
-	height:28px;
-	color:#fff;
+.video {
+	position: relative;
 }
-.menu
-{
-	width:700px;
-	height:30px;
+.play-button {
+	position: absolute;
+	top: 45%; left: 50%;
+	margin: -37px 0 0 -37px;
+	background: url(img/play_arrow.png) no-repeat 30px center;
+	background-color: rgba(76,71,75,.35);
+	width: 77px; height: 77px;
+	-moz-border-radius: 38px;
+	border-radius: 38px;
+	-webkit-transition: background-color .3s ease; 
+	-moz-transition: background-color .3s ease;
+	-ms-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
 }
-.menu ul
-{
-	padding:0px;
-	margin:0px;
-	list-style:none;
+.play-button:hover {
+	background-color: rgba(76,71,75,.5);
 }
-.menu ul li
-{
-	font-size:11px;
-	color:#FFF;
-	line-height:30px;
-	float:left;
-	text-transform:uppercase;
-	background:url(../img/menu_bg.jpg) no-repeat left center;
-	padding:0 7px 0 9px;
+.cta {
+	text-align: center;
+	padding: 30px 0;
 }
-.menu ul li a
-{
-	text-decoration:none;
-	color:#FFF;
+.cta a {
+	background: #333;
+	color: #fff;
+	display: inline-block;
+  font-family: 'roboto_condensedregular',helvetica,sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 14px 22px;
+	-webkit-transition: background .3s ease; 
+	-moz-transition: background .3s ease;
+	-ms-transition: background .3s ease;
+	-o-transition: background .3s ease;
+	transition: background .3s ease;
 }
-.menu ul li a:hover, .menu ul li.active a
-{
-	color:#46b4b4;
+.cta a:hover {
+	background: #444;
 }
-.menu ul li.nobg
-{
-	background:none;
+.cta form {
+	position: relative;
+	width: 296px;
+	margin: 10px auto;
+	
 }
-.facebook_like
-{
-	width:75px;
-	height:20px;
-	padding:3px 0 0 0;
-}
-
-.video
-{
-	width:1016px;
-	height:563px;
-	margin-bottom:20px;
-}
-.blogarea
-{
-	padding:0 0 100px 15px;
-}
-.blogarea h2
-{
-	font-size:12px;
-	color:#cfcfca;
-	text-transform:uppercase;
-	line-height:14px;
-	font-weight:bold;
-	padding:0 0 14px 0;
-	margin:0px;
+.cta input[type="text"] {
+	background: #000;
+	border: 2px solid #333;
+	color: #fff;
+	outline: 0;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 8px 14px;
+	width: 263px;
 }
 
-.blogarea img
-{
+::-webkit-input-placeholder { 
+	font-family: 'roboto_condenseditalic',helvetica,sans-serif; 
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+}
+:-moz-placeholder { 
+	font-family: 'roboto_condenseditalic',helvetica,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+}
+::-moz-placeholder { 
+	font-family: 'roboto_condenseditalic',helvetica,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+}
+:-ms-input-placeholder { 
+	font-family: 'roboto_condenseditalic',helvetica,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+}
+
+.cta input[type="submit"] {
+	background: url(img/submit_arrow.png) no-repeat center center #000;
+	position: absolute;
+	top: 3px; right: 3px;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	outline: 0;
+}
+.blogarea {
+	padding:0 0 100px;
+}
+.blogarea img {
+	width: 100px!important;
 	margin-right:13px;
 	border: none !important;
 }
@@ -181,4 +207,26 @@ li.tumblr_post {
 
 li.tumblr_post img {
     width: 150px;
+}
+
+
+@font-face {
+    font-family: 'roboto_condenseditalic';
+    src: url('fonts/robotocondensed-italic-webfont.eot');
+    src: url('fonts/robotocondensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/robotocondensed-italic-webfont.woff') format('woff'),
+         url('fonts/robotocondensed-italic-webfont.ttf') format('truetype'),
+         url('fonts/robotocondensed-italic-webfont.svg#roboto_condenseditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('fonts/robotocondensed-regular-webfont.eot');
+    src: url('fonts/robotocondensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/robotocondensed-regular-webfont.woff') format('woff'),
+         url('fonts/robotocondensed-regular-webfont.ttf') format('truetype'),
+         url('fonts/robotocondensed-regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
